@@ -6,9 +6,9 @@
 
 <div class="flex">
 	{#if wideBG}
-		<a class="bg-[#3465A4] w-[42px] break-normal" href={'#'}>{optionKey}</a>
+		<a class="bg-[#3465A4] w-[42px] break-normal" href={'/404'}>{optionKey}</a>
 	{:else}
-		<a class="bg-[#3465A4] w-[22px]" href={'#'}>{optionKey}</a>
+		<a class="bg-[#3465A4] w-[22px]" href={'/404'}>{optionKey}</a>
 	{/if}
 
 	<p class="ml-4">{optionName}</p>
