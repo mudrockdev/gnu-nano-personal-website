@@ -31,13 +31,10 @@ jobs:
   # Build job
   publish:
     runs-on: ubuntu-latest
-    env:
-      NODE_VERSION: 22
     steps: 
-      - name: Install Node
-        run: |
-          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash \
-          nvm install 22
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
       
       - name: Checkout
         uses: actions/checkout@v3
