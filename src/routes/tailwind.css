@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	color: white;
+	background-color: black;
+	font-weight: 700;
+	font-family: 'Roboto Mono', monospace;
+}
+
+.link {
+	text-decoration-line: underline;
+}
