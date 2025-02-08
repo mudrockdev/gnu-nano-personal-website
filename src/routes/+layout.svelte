@@ -55,32 +55,38 @@
 					</div>
 				{/if}
 				<div class="fixed bottom-0 w-screen bg-black" id="footer">
-					<div class="flex justify-between pr-32">
-						<div>
-							<Option optionKey="^G" optionName="Help" />
-							<Option optionKey="^X" optionName="Exit" />
+					<div class="@container flex justify-between">
+						<div class="flex flex-wrap justify-between sm:w-[20%] w-[30%]">
+							<div>
+								<Option optionKey="^G" optionName="Help" />
+								<Option optionKey="^X" optionName="Exit" />
+							</div>
+							<div>
+								<Option optionKey="^O" optionName="Write Out" />
+								<Option optionKey="^R" optionName="Read File" />
+							</div>
 						</div>
-						<div>
-							<Option optionKey="^O" optionName="Write Out" />
-							<Option optionKey="^R" optionName="Read File" />
+						<div class="flex flex-wrap justify-between sm:w-[20%] w-[30%]">
+							<div>
+								<Option optionKey="^F" optionName="Where Is" />
+								<Option optionKey={`^\\`} optionName="Replace" />
+							</div>
+							<div>
+								<Option optionKey="^K" optionName="Cut" />
+								<Option optionKey="^U" optionName="Paste" />
+							</div>
 						</div>
-						<div>
-							<Option optionKey="^F" optionName="Where Is" />
-							<Option optionKey={`^\\`} optionName="Replace" />
+						<div class="flex flex-wrap justify-between sm:w-[20%] w-[30%]">
+							<div>
+								<Option optionKey="^T" optionName="Execute" />
+								<Option optionKey="^J" optionName="Justify" />
+							</div>
+							<div>
+								<Option optionKey="^C" optionName="Location" />
+								<Option optionKey="^/" optionName="Go To Line" />
+							</div>
 						</div>
-						<div>
-							<Option optionKey="^K" optionName="Cut" />
-							<Option optionKey="^U" optionName="Paste" />
-						</div>
-						<div>
-							<Option optionKey="^T" optionName="Execute" />
-							<Option optionKey="^J" optionName="Justify" />
-						</div>
-						<div>
-							<Option optionKey="^C" optionName="Location" />
-							<Option optionKey="^/" optionName="Go To Line" />
-						</div>
-						<div>
+						<div class="hidden sm:block pr-8 w-[10%]">
 							<Option optionKey="^M-U" optionName="Undo" wideBG="true" />
 							<Option optionKey="^M-E" optionName="Redo" wideBG="true" />
 						</div>

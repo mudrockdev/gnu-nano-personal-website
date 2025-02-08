@@ -27,6 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tailwindcss/vite": "^4.0.4",
 		"@tanstack/svelte-query": "^5.66.0"
 	}
 }

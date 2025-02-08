@@ -4,6 +4,7 @@
     "": {
       "name": "gnu-nano-personal-website",
       "dependencies": {
+        "@tailwindcss/vite": "^4.0.4",
         "@tanstack/svelte-query": "^5.66.0",
       },
       "devDependencies": {
@@ -188,6 +189,8 @@
     "@tailwindcss/oxide-win32-x64-msvc": ["@tailwindcss/oxide-win32-x64-msvc@4.0.4", "", { "os": "win32", "cpu": "x64" }, "sha512-WzMA0aL/24/JyNrv2Yhr/Og24QGRPWJMjRyCJ4HRoGMs6/8svOQKrnnZ/9LUFwn56irAndFBjWWnlaqykH+g5Q=="],
 
     "@tailwindcss/postcss": ["@tailwindcss/postcss@4.0.4", "", { "dependencies": { "@alloc/quick-lru": "^5.2.0", "@tailwindcss/node": "^4.0.4", "@tailwindcss/oxide": "^4.0.4", "lightningcss": "^1.29.1", "postcss": "^8.4.41", "tailwindcss": "4.0.4" } }, "sha512-Up8fB+DUhy8qvDqlHgZAWaL5iVEbypcuOjzlW4K6EyU+aGEvXK0/wrcKBKOTvg3KKP5givJMexJ0aG1hDPOuRg=="],
+
+    "@tailwindcss/vite": ["@tailwindcss/vite@4.0.4", "", { "dependencies": { "@tailwindcss/node": "^4.0.4", "@tailwindcss/oxide": "^4.0.4", "lightningcss": "^1.29.1", "tailwindcss": "4.0.4" }, "peerDependencies": { "vite": "^5.2.0 || ^6" } }, "sha512-zrWGbluPeXeoetUQoDFmt1dQIeiOBThfznla7zPIqST69rMmiDD4SZwJrHVoL5CvXz06AYQXz/M/jELSakL7Rg=="],
 
     "@tanstack/query-core": ["@tanstack/query-core@5.66.0", "", {}, "sha512-J+JeBtthiKxrpzUu7rfIPDzhscXF2p5zE/hVdrqkACBP8Yu0M96mwJ5m/8cPPYQE9aRNvXztXHlNwIh4FEeMZw=="],
 

@@ -27,7 +27,9 @@
 			<p class="break-normal" href={'#'}>{lineNumber}</p>
 		</div>
 		<p class="pl-2">
+			<!-- eslint-disable -->
 			{@html stringWithWhiteSpaces}
+			<!-- eslint-enable -->
 		</p>
 	</div>
 </div>
