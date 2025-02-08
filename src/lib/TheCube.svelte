@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import SuzuranAngy from '../assets/suzuran-angy.gif';
 	import SuzuranHappy from '../assets/suzuran-happy.gif';
 	import SuzuranTail from '../assets/suzuran-tail.gif';
