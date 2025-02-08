@@ -57,13 +57,11 @@
 		align-items: center;
 		font-size: 20px;
 		color: white;
-		border-radius: 10px;
 
 		& img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 10px;
 		}
 	}
 
