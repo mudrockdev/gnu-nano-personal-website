@@ -1,8 +1,5 @@
-<p id="grub">{'Grub rescue>'}</p>
+<script>
+	import GrubRescue from '$lib/GrubRescue.svelte';
+</script>
 
-<style>
-	@import url('https://fonts.cdnfonts.com/css/perfect-dos-vga-437');
-	#grub {
-		font-family: 'Perfect DOS VGA 437', sans-serif;
-	}
-</style>
+<GrubRescue />

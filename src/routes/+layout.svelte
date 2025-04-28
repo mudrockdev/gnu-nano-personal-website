@@ -1,4 +1,5 @@
 <script>
+	const { children } = $props();
 	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 	import Option from '$lib/Option.svelte';
 	import ErrorPage from './+error.svelte';
@@ -6,7 +7,7 @@
 	import { page } from '$app/stores';
 	import './tailwind.css';
 	const queryClient = new QueryClient();
-	let weebMode = false;
+	let weebMode = $state(false);
 	if (localStorage.getItem('weebMode') === null || localStorage.getItem('weebMode') === 'false') {
 		weebMode = false;
 	} else {
@@ -20,6 +21,14 @@
 			? localStorage.setItem('weebMode', 'true')
 			: localStorage.setItem('weebMode', 'false');
 	}
+	$effect(() => {
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then((reg) => console.log('Service worker registered:', reg))
+				.catch((err) => console.error('Service worker registration failed:', err));
+		}
+	});
 </script>
 
 {#if $page.status === 404}
@@ -40,7 +49,7 @@
 						<a
 							class="ml-4"
 							href={'#'}
-							on:click={() => {
+							onclick={() => {
 								setWeebMode();
 							}}>x</a
 						>
@@ -48,7 +57,7 @@
 				</div>
 			</div>
 			<div class="flex">
-				<slot />
+				{@render children()}
 				{#if weebMode}
 					<div class="ml-auto mt-32 mr-32">
 						<TheCube class="fixed right-0 bottom-0" />
