@@ -4,7 +4,7 @@
 	import Option from '$lib/Option.svelte';
 	import ErrorPage from './+error.svelte';
 	import TheCube from '$lib/TheCube.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import './tailwind.css';
 	const queryClient = new QueryClient();
 	let weebMode = $state(false);
@@ -31,7 +31,7 @@
 	});
 </script>
 
-{#if $page.status === 404}
+{#if page.status === 404}
 	<ErrorPage />
 {:else}
 	<head>
@@ -42,7 +42,7 @@
 		<main class="max-w-screen max-h-screen">
 			<div class="fixed w-screen">
 				<div class="flex justify-between px-8 bg-[#3465A4]" id="nav">
-					<p>GNU nano 8.2</p>
+					<p>GNU nano 8.4</p>
 					<p>www.mudrock.dev</p>
 					<div class="flex">
 						I
@@ -51,8 +51,10 @@
 							href={'#'}
 							onclick={() => {
 								setWeebMode();
-							}}>x</a
+							}}
 						>
+							x
+						</a>
 					</div>
 				</div>
 			</div>

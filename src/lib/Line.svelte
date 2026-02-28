@@ -1,10 +1,8 @@
 <script>
-	/* import { onMount } from 'svelte'; */
-	export let lineNumber;
-	//export let maxLineNumber;
-	export let lineText;
+	const { lineText, lineNumber } = $props();
 
-	let stringWithWhiteSpaces = '';
+	let stringWithWhiteSpaces = $state('');
+	// svelte-ignore state_referenced_locally
 	lineText.split().forEach((char) => {
 		if (char === '') {
 			stringWithWhiteSpaces += '&nbsp;';

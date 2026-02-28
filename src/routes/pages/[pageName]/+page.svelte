@@ -1,11 +1,10 @@
 <script>
 	import Line from '$lib/Line.svelte';
 
-	/** @type {import('./$types').PageData} */
-	export let data;
+	const { data } = $props();
 
-	const lines = data.lines;
-	const maxLineNumber = data.maxLineNumber;
+	const lines = $derived(data.lines);
+	const maxLineNumber = $derived(data.maxLineNumber);
 </script>
 
 <div id="line-list">
